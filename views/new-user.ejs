@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Profile</title>
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/profiles.css">
+  <script src="/scripts/file-preview.js" defer></script>
+</head>
+<body>
+  <main id="new-user">
+    <form action="/profiles" method="POST" enctype="multipart/form-data"> <!-- 파일 업로드 기능을 추가할 경우 반드시 enctype을 추가, 서버로 보낼 때, 보낼 데이터를 압축하는 방식을 결정 -->
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-control">
+        <img id="image-preview" src="" alt="Your picked name"/>
+        <label for="image">User image</label>
+        <input type="file" id="image" name="image" required accept="image/jpg,image/png"/> 
+      </div>
+      <button class="btn">Save User</button>
+    </form>
+  </main>
+</body>
+</html>
